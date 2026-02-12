@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Link</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+    body{
+        display:flex;
+        text-align: center;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background:#FBE9F1;
+        font-family:Arial;
+        margin:0;
+    }
+
+    h1{
+      color: #E675A6;
+      font-size:40px;
+    }
+
+    .btn{
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:8px;
+        background:#E675A6;
+        color:white;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    .btn:hover{
+        background:#DF4E8D;
+        transform:scale(1.05);
+    }
+</style>
+</head>
+
+<body>
+
+<div>
+<h1>&#128151; HAPPY VALENTINE'S DAY &#128151;</h1>
+<button class="btn" onclick="goPage()">Want a flower? just click it &#128072;</button>
+</div>
+
+<script>
+function goPage(){
+    window.location.href = "flower.html";
+}
+
+$(document).ready(function(){
+
+    function checkPhone(){
+        if($(window).width() <= 600){ 
+            $("h1").css("font-size","24px");
+            $(".btn").css({
+                "font-size":"14px",
+                "padding":"12px 20px"
+            });
+        }else{
+            $("h1").css("font-size","40px");
+            $(".btn").css({
+                "font-size":"18px",
+                "padding":"15px 30px"
+            });
+        }
+    }
+
+    checkPhone();
+    $(window).resize(checkPhone);
+});
+</script>
+
+</body>
+</html>
