@@ -3,79 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Button Link</title>
+<link rel="stylesheet" href="flower.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="img/flowers.png" type="image/x-icon">
+<title>🌸To Minea</title>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
 <style>
-    body{
-        display:flex;
-        text-align: center;
-        justify-content:center;
-        align-items:center;
-        height:100vh;
-        background:#FBE9F1;
-        font-family:Arial;
-        margin:0;
-    }
+    .contain{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height:100vh;
+    background:#93E9BE;
+    font-family:Arial;
+    margin:0;
+}
 
-    h1{
-      color: #E675A6;
-      font-size:40px;
-    }
+h1{
+    text-align: center;
+    color: #E675A6;
+    font-size:30px;
+}
 
-    .btn{
-        padding:15px 30px;
-        font-size:18px;
-        border:none;
-        border-radius:8px;
-        background:#E675A6;
-        color:white;
-        cursor:pointer;
-        transition:0.3s;
-    }
+p {
+    text-align: center;
+    padding: 10px 30px;
+    color: #217F6D;
+}
 
-    .btn:hover{
-        background:#DF4E8D;
-        transform:scale(1.05);
-    }
+.btn{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    background:#39CCB0;
+    color:white;
+    cursor:pointer;
+}
 </style>
 </head>
 
 <body>
+    <div class="contain">
+        <audio id="bg-music" loop>
+            <source src="JomlerySne.mp3">
+        </audio>
+    
+        <div id="app">
+            <button onclick="playMusic()">Click it first before read</button>
+            <h1>Could You Be Mine?</h1>
+            <p>Since we talk a lot for many days, i know myself, how much i want you.  For me im not just choosing you to replace s1 
+                but im choosing you to be my fav person, to be my comfort person.You know, I was fial with 2 people i love the most, so i don't want it again.
+                I hope we can build this love until we P'jab Peak, Married, then get old together. for me, i don't promise that i can give happiness 
+                to you, but i'll try My Best to earn, and give what i have to you, even if my own life. I will try to know you as well as i can. 
+                Maybe you're not my first person, but i will take care you to be my last.
+            </p>
+            
+            <p>Can You Be Mine?</p>
+        
+            <button class="btn" onclick="loadPage('flower')">
+                Click it babe 🌸
+            </button>
 
-<div>
-<h1>&#128151; HAPPY VALENTINE'S DAY &#128151;</h1>
-<button class="btn" onclick="goPage()">Want a flower? just click it &#128072;</button>
-</div>
-
-<script>
-function goPage(){
-    window.location.href = "flower.html";
-}
-
-$(document).ready(function(){
-
-    function checkPhone(){
-        if($(window).width() <= 600){ 
-            $("h1").css("font-size","24px");
-            $(".btn").css({
-                "font-size":"14px",
-                "padding":"12px 20px"
-            });
-        }else{
-            $("h1").css("font-size","40px");
-            $(".btn").css({
-                "font-size":"18px",
-                "padding":"15px 30px"
-            });
-        }
-    }
-
-    checkPhone();
-    $(window).resize(checkPhone);
-});
-</script>
-
+        </div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
